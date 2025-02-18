@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parasitologia</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../assets/index.jpg');
+            background-size: cover;
+            background-position: center 20%;
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+            position: relative;
+        }
+        h2 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .texto {
+            font-size: 150px;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        .texto:hover {
+            color: transparent;
+            text-shadow: 0 0 10px white;
+            -webkit-text-stroke: 2px white;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+        }
+        /* Ajustes para telas de 1280px de largura (paisagem) */
+        @media (max-width: 1280px) {
+            body {
+                background-size: cover;
+            }
+            .logo {
+                width: 120px;
+            }
+            .texto {
+                font-size: 130px;
+            }
+        }
+
+        /* Ajustes para telas 800x1280 (retrato) */
+        @media (max-width: 800px) and (max-height: 1280px) {
+            body {
+                background-size: cover;
+            }
+            .logo {
+                width: 100px; /* Logo ajustado para tela retrato */
+            }
+            .texto {
+                font-size: 100px; /* Ajuste do tamanho do texto */
+            }
+            h2 {
+                font-size: 40px; /* Ajuste do título */
+            }
+        }
+
+        /* Ajustes para telas de 1180px */
+        @media (max-width: 1180px) {
+            .logo {
+                width: 120px;
+            }
+        }
+
+        /* Ajustes para telas de 1020px */
+        @media (max-width: 1020px) {
+            .logo {
+                width: 100px;
+            }
+            .texto {
+                font-size: 120px;
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+            }
+        }
+
+        /* Ajustes para telas de 600px */
+        @media (max-width: 600px) {
+            .logo {
+                width: 80px;
+            }
+            .texto {
+                font-size: 80px;
+                display: flex;
+                flex-direction: column;
+                line-height: 1;
+            }
+            .texto span {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="../assets/farma.png" alt="Símbolo Medicina">
+    <h2>Aperte e entre</h2>
+    <div class="texto" onclick="location.href='login.html'">
+        <span class="desktop">PARASITOLOGIA</span>
+        <span class="mobile" style="display: none;">PARASI<br>TOLOGIA</span>
+    </div>
+    <script>
+        function ajustarTexto() {
+            if (window.innerWidth <= 600) {
+                document.querySelector('.desktop').style.display = 'none';
+                document.querySelector('.mobile').style.display = 'block';
+            } else {
+                document.querySelector('.desktop').style.display = 'block';
+                document.querySelector('.mobile').style.display = 'none';
+            }
+        }
+        window.addEventListener('resize', ajustarTexto);
+        window.addEventListener('load', ajustarTexto);
+    </script>
+</body>
+</html>

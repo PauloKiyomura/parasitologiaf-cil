@@ -1,0 +1,258 @@
+
+/* Background */
+body {
+    background-image: url('../assets/IMG_9557.jpg'); /* Altere o caminho da imagem aqui */
+    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-position: center; /* Centraliza a imagem na tela */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black
+    padding: 15px 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+    font-family: 'Magnetar';
+    src: url(../css/fontes/Magnetar.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTVCS-Lights';
+    src: url(../css/fontes/GTVCS-Light.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+.title {
+    font-family: 'Magnetar';
+    color: #f5f0f0;
+    font-size: 120px;
+    letter-spacing: 0.1em;
+    margin: 0;
+    margin-top: 154px; /* Ajuste a margem superior conforme necessário */
+}
+
+.subtitle {
+    font-family: 'GTVCS-Lights';
+    color: #f5f0f0;
+    font-size: 80px;
+    margin-top: 20px; /* Corrigido de 20xp para 20px */
+}
+
+/* Centralizar o texto */
+.centered-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Centralizar links */
+.nav-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links li {
+    position: relative;
+    display: inline;
+}
+
+/* Atualização dos estilos da navegação */
+.nav-links a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+    padding-bottom: 5px;
+    margin-top: 10px; /* Adicionando margem superior */
+}
+
+/* Efeito de sublinhado com gradiente */
+.nav-links a::after {
+    content: "";
+    display: fixed;
+    width: 0;
+    height: 3px;
+    background: purple
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+
+/* Efeito de sublinhado com gradiente */
+.nav-links a::after {
+    content: "";
+    display: block; /* Mudado de fixed para block para um comportamento mais previsível */
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff00ff 0%, #6f00ff 100%); /* Gradiente adicionado */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: rgb(156, 152, 152)
+}
+
+/* Menu lateral */
+.menu-button {
+    position: fixed;
+    top: 7px;
+    right: 20px;
+    background: rgb(195, 0, 255); /* Cor roxa */
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background: rgb(221, 104, 211);
+}
+
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    background: BLACK
+    color: white;
+    padding: 60px 20px;
+    box-shadow: -4px 0 8px rgba(0,0,0,0.3);
+    transition: right 0.6s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.side-menu.open {
+    right: 0;
+    opacity: 1;
+}
+
+.menu-item {
+    display: block;
+    padding: 15px;
+    margin: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    background: black;
+}
+
+.menu-item:hover {
+    background: linear-gradient(90deg, #ff00ff 0%, #6f00ff 100%);
+}
+
+/* Organizando navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.center-section {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.right-section {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.footer {
+    position: fixed;
+    font-size: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0); /* Fundo vermelho */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.ticker-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: -400px;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    color: rgb(204, 0, 255); /* Texto na cor roxa */
+    font-size: 1.5em; /* Fonte maior */
+    animation: scrollTicker 220s linear infinite; /* Aumentando o tempo para 60s para reduzir a velocidade */
+    min-width: 1280%; /* Aumente a largura mínima, duplicando o conteúdo */
+}
+.ticker span {
+    padding: 10px 20px;
+    font-size: 1.2em;
+}
+
+@keyframes scrollTicker {
+    0% {
+        transform: translateX(8%); /* Começa fora da tela à direita */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina fora da tela à esquerda */
+    }
+}
+
+
+
+
+
+
+
+
+  

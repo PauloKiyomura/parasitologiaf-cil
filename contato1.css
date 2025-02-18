@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('../assets/IMG_9557.jpg'); /* Altere o caminho da imagem aqui */
+            background-size: cover; /* Faz com que a imagem cubra toda a tela */
+            background-position: center; /* Centraliza a imagem na tela */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            flex-direction: column;
+            margin: 0;
+            text-align: center;
+            position: relative;
+            
+  }
+  
+  /* Container centralizado */
+  .container {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  
+  /* Animação RGB */
+  @keyframes rgb-glow {
+    0%   { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+    25%  { text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue; }
+    50%  { text-shadow: 0 0 10px green, 0 0 20px green, 0 0 30px green; }
+    75%  { text-shadow: 0 0 10px yellow, 0 0 20px yellow, 0 0 30px yellow; }
+    100% { text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red; }
+  }
+  
+  /* Área dos ícones */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  /* Cada item (ícone + nome) */
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .social-icons i {
+    font-size: 130px; /* Ícones grandes */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito de hover para os ícones */
+  .social-icons i:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Aplicando a animação RGB com delays diferentes */
+  #ayumi   { animation: rgb-glow 3s infinite linear; animation-delay: 0s; }
+  #caio    { animation: rgb-glow 3s infinite linear; animation-delay: 0.3s; }
+  #joao    { animation: rgb-glow 3s infinite linear; animation-delay: 0.6s; }
+  #isabela { animation: rgb-glow 3s infinite linear; animation-delay: 0.9s; }
+  #paulo   { animation: rgb-glow 3s infinite linear; animation-delay: 1.2s; }
+  
+  /* Estilo para os nomes abaixo dos ícones (aumentado) */
+  .icon-item p {
+    margin-top: 10px;
+    font-size: 22px; /* Tamanho aumentado */
+    color: #fff;
+  }
+
+  a.voltar {
+    position: fixed;
+  top: -469px;
+  right: 480px;
+  cursor: pointer;
+  padding: 15px 30px;
+  color: #7700ff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  border: 2px solid #7700ff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  a.voltar {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #7700ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    border: 2px solid #7700ff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+a.voltar:hover {
+    color: #fff;
+    background: #7700ff;
+    box-shadow: 0 0 10px #7700ff, 0 0 40px #7700ff, 0 0 80px #7700ff;
+    border-color: transparent;
+}
+
+a.voltar span {
+    position: absolute;
+    display: block;
+    background: #7700ff;
+    box-shadow: 0 0 5px #7700ff, 0 0 10px #7700ff, 0 0 20px #7700ff;
+    transition: 1s;
+}
+
+a.voltar span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+}
+
+a.voltar:hover span:nth-child(1) {
+    left: 100%;
+}
+
+a.voltar span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transition-delay: 0.25s;
+}
+
+a.voltar:hover span:nth-child(2) {
+    top: 100%;
+}
+
+a.voltar span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    transition-delay: 0.5s;
+}
+
+a.voltar:hover span:nth-child(3) {
+    right: 100%;
+}
+
+a.voltar span:nth-child(4) {
+    bottom: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transition-delay: 0.75s;
+}
+
+a.voltar:hover span:nth-child(4) {
+    bottom: 0;
+}
+.footer {
+  position: fixed;
+  font-size: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0); /* Fundo vermelho */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  z-index: 1000;
+}
+  
+  

@@ -1,0 +1,175 @@
+body {
+    background: url('../assets/IMG_9557.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais profissional */
+    background-color: #f7f7f7;
+    color: #fff;  /* Cor padrão para o texto em branco */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Melhor legibilidade */
+}
+
+/* Estilo dos Títulos */
+h1, h2, h3, h4, h5, h6 {
+    color: #8e44ad;  /* Títulos em roxo */
+    font-weight: 700;  /* Negrito para maior destaque */
+    margin-bottom: 15px;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Transição suave */
+}
+
+a:hover {
+    color: #9900ff; /* Cor de hover mais profissional */
+    text-decoration: underline;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: #000000;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 12px 25px;
+    display: inline-block;
+    font-size: 1.1rem;
+    border-radius: 5px; /* Bordas arredondadas para links */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+nav ul li a:hover {
+    background-color: #6f00ff;
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 40px 20px;
+    background-color: #fff;  /* Fundo branco para o conteúdo */
+    background-image: url('../assets/IMG_9557.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o conteúdo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Estilo das Seções */
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8; /* Espaçamento entre linhas para melhor leitura */
+}
+
+/* Estilo das Listas Ordenadas */
+ol li {
+    color: #fff;  /* Cor branca para os itens da lista */
+}
+
+.btn-voltar {
+    background-color: #8e44ad; /* Cor roxa para o botão */
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(255, 0, 200, 0.3); /* Sombra rosa */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
+}
+
+/* Efeito de hover */
+.btn-voltar:hover {
+    background-color: #9b59b6; /* Cor roxa mais escura no hover */
+    box-shadow: 0 8px 12px rgba(255, 0, 200, 0.5); /* Sombra rosa mais intensa */
+    transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Estilo das Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+
+    main {
+        padding: 20px;
+    }
+}

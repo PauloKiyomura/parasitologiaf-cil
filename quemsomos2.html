@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Quem somos nós</title>
+    <style>
+        body {
+            background: url('../assets/IMG_9557.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .portrait {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            right: -90px; 
+            gap: 10px;
+            position: relative;
+        }
+        .portrait img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            text-align: center;
+            border-radius: 50%;
+            border: 5px solid white;    
+            transition: box-shadow 0.3s; /* Transição suave */
+        }
+        .text {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .portrait:hover img {
+            box-shadow: 0 0 15px 5px rgba(128, 0, 128, 0.6); /* sombra roxa suave ao redor da imagem */
+            transform: scale(1.1); /* Aumenta a imagem em 10% */
+        }
+    a.voltar {
+    position: fixed;
+  top: -335px;
+  right: 955px;
+  cursor: pointer;
+  padding: 15px 30px;
+  color: #7700ff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  border: 2px solid #7700ff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  }
+  a.voltar {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #7700ff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    border: 2px solid #7700ff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+a.voltar:hover {
+    color: #fff;
+    background: #7700ff;
+    box-shadow: 0 0 10px #7700ff, 0 0 40px #7700ff, 0 0 80px #7700ff;
+    border-color: transparent;
+}
+
+a.voltar span {
+    position: absolute;
+    display: block;
+    background: #7700ff;
+    box-shadow: 0 0 5px #7700ff, 0 0 10px #7700ff, 0 0 20px #7700ff;
+    transition: 1s;
+}
+
+a.voltar span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+}
+
+a.voltar:hover span:nth-child(1) {
+    left: 100%;
+}
+
+a.voltar span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    transition-delay: 0.25s;
+}
+
+a.voltar:hover span:nth-child(2) {
+    top: 100%;
+}
+
+a.voltar span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    transition-delay: 0.5s;
+}
+
+a.voltar:hover span:nth-child(3) {
+    right: 100%;
+}
+
+a.voltar span:nth-child(4) {
+    bottom: 100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    transition-delay: 0.75s;
+}
+
+a.voltar:hover span:nth-child(4) {
+    bottom: 0;
+}
+/* Rodapé */
+.footer {
+  position: fixed; /* Fixa o rodapé */
+  font-size: 20px;
+  left: 0;
+  bottom: -50px; /* Inicialmente fora da tela */
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(233, 233, 233);
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+/* Quando o usuário rolar até o final */
+.footer.show {
+  bottom: 0; /* Coloca o rodapé no final da tela */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="portrait">
+            <div class="text">Ayumi<br>Kitada</div>
+            <img src="../assets/ayumi.jpg" alt="Retrato 1">
+        </div>
+        <div class="portrait">
+            <div class="text">Caio<br>Mariano</div>
+            <img src="../assets/caio.jpeg" alt="Retrato 2">
+        </div>
+        <div class="portrait">
+            <div class="text">Isabela<br>Carvalho</div>
+            <img src="../assets/isa.jpg" alt="Retrato 3">
+        </div>
+        <div class="portrait">
+            <div class="text">João<br>Vitor</div>
+            <img src="../assets/joao.jpg" alt="Retrato 4">
+        </div>
+        <div class="portrait">
+            <div class="text">Paulo<br>Kiyomura</div>
+            <img src="../assets/paulo.jpg" alt="Retrato 5">
+        </div>
+    </div>
+    <a href='landingpage.html' class="voltar">
+        VOLTAR
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <footer class="footer">
+        <p>&copy; 2025 Farmácia-UNIFEV. Todos os direitos reservados.</p>
+      </footer>
+      <script>
+        window.onscroll = function() {
+    var footer = document.querySelector('.footer');
+    var docHeight = document.documentElement.scrollHeight; // Altura total do conteúdo da página
+    var scrollPosition = window.innerHeight + window.scrollY; // Posição atual da rolagem + altura da tela
+  
+    // Quando o usuário rolar até o final da página
+    if (scrollPosition >= docHeight) {
+      footer.classList.add('show'); // Adiciona a classe 'show' para mostrar o rodapé
+    } else {
+      footer.classList.remove('show'); // Remove a classe 'show' para esconder o rodapé
+    }
+  };
+      </script>
+</body>
+</html>

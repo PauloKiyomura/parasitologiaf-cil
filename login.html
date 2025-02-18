@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Múltiplos Olhares sobre a Parasitologia</title>
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="sistema.js" defer></script>
+    <title>Form Interativo</title>
+</head>
+
+<body>
+    <section class="containerPai">
+        <div class="card cadastroActive">
+            <div class="esquerda">
+                <!-- Formulário de Login -->
+                <div class="formLogin">
+                    <h2>Fazer Login</h2>
+                    <form id="loginForm" onsubmit="event.preventDefault(); handleLogin();">
+                        <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+                        <div class="password-container">
+                            <input type="password" name="senha" id="loginSenha" placeholder="Senha" required>
+                            <span class="toggle-password closed" id="toggleLoginSenha" onclick="togglePassword('loginSenha', 'toggleLoginSenha')">👁️</span>
+                        </div>
+                        <button type="submit">Entrar</button>
+                    </form>
+                </div>
+
+                <!-- Seção para quem já tem uma conta -->
+                <div class="facaLogin">
+                    <h2>Já tem </br>uma conta?</h2>
+                    <p>Acesse o Múltiplos Olhares da Parasitologia...</p>
+                    <button class="loginButton" onclick="mostrarCadastro()">Faça Login</button>
+                </div>
+            </div>
+            
+            <!-- Notificação de sucesso para login e cadastro -->
+            <div class="notification success hide">
+                <span class="icon">✔️</span>
+                <p>Login realizado com sucesso!</p>
+                <button class="closeButton">×</button>
+            </div>
+            <div class="notification success hide">
+                <span class="icon">✔️</span>
+                <p>Cadastro realizado com sucesso! Agora, faça login.</p>
+                <button class="closeButton">×</button>
+            </div>
+            <div id="notificacao" class="notificacao"></div>
+
+            <div class="direita">
+                <!-- Formulário de Cadastro -->
+                <div class="formCadastro">
+                    <h2>Cadastro</h2>
+                    <form id="cadastroForm" onsubmit="event.preventDefault(); handleCadastro();">
+                        <input type="text" name="nome" placeholder="Nome" required>
+                        <input type="email" name="email" id="cadastroEmail" placeholder="Email" required>
+                        <input type="password" name="senha" id="cadastroSenha" placeholder="Senha" required>
+                        <input type="password" name="confirmeSenha" id="confirmeSenha" placeholder="Confirme a sua senha" required>
+                        <div id="senhaForca" class="forca"></div>
+                        <button type="submit">Cadastrar</button>
+                    </form>
+                </div>
+                
+                <!-- Seção para quem não tem uma conta -->
+                <div class="facaCadastro">
+                    <h2>Não tem </br>uma conta?</h2>
+                    <p>Bem-vindo ao Múltiplos Olhares da Parasitologia...</p>
+                    <button class="cadastroButton" onclick="mostrarLogin()">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../animação/login.js"></script>
+</body>
+
+</html>
